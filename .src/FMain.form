@@ -1,0 +1,25 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,107,64)
+  Icon = Picture["uniftxt.png"]
+  { Label1 Label
+    MoveScaled(7,1,75,4)
+    Text = ("Seleccione ficheros, copielo  y peguelo en el  TextArea:")
+  }
+  { TextArea1 TextArea
+    MoveScaled(2,5,102,45)
+  }
+  { ButtonUNIR Button
+    MoveScaled(80,51,22,4)
+    Text = ("UNIR")
+  }
+  { Label2 Label
+    MoveScaled(1,54,60,3)
+    Text = ("Ruta salida fichero unido:")
+  }
+  { Label3 Label
+    MoveScaled(2,57,106,3)
+    Expand = True
+  }
+}

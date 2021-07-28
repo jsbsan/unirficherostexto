@@ -1,0 +1,49 @@
+' Gambas class file
+
+Public Sub Form_Open()
+
+  Settings.Read(Me)
+  Label3.Text = User.Home & "/PDF/unidos.txt"
+
+End
+
+Public Sub ButtonUNIR_Click()
+
+  unirficheros
+
+End
+
+Public Sub Label1_MouseDown()
+
+End
+
+Public Sub Form_Close()
+
+  Settings.Write(Me)
+
+End
+
+Public Sub unirficheros()
+
+  Dim nombres As String[]
+  Dim n As String
+  Dim contenido As String
+
+  Dim nombrecompleto As String
+
+  nombres = Split(TextArea1.text, "\n")
+
+  For Each n In nombres
+    If Exist(n) Then
+      contenido &= File.Load(n)
+      nombrecompleto &= "_" & Replace(File.BaseName(n), "test_", "")
+    Endif
+
+  Next
+
+  File.Save(User.Home & "/PDF/unido" & nombrecompleto & ".csv", contenido)
+  Label3.Text = User.Home & "/PDF/unido" & nombrecompleto & ".csv"
+  Label3.Tooltip = User.Home & "/PDF/unido" & nombrecompleto & ".csv"
+  Message.Info("terminado de unir ficheros")
+
+End

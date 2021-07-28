@@ -1,0 +1,23 @@
+# Gambas Project File 3.0
+Title=unirficherostexto
+Startup=FMain
+Icon=uniftxt.png
+Version=0.0.1
+Component=gb.image
+Component=gb.gui
+Component=gb.form
+Component=gb.settings
+Description="Unir fichero txt. Selecciona del navegador, copia y pega en el textArea y el programa se encarga de unir y crear un nuevo fichero txt"
+Authors="Julio Sanchez Berro"
+TabSize=2
+Language=en_US
+Maintainer=jsbsan
+Address=jusabejusabe@gmail.com
+Url=https://jsbsan.blogspot.com/
+License=General Public License
+PackageName=unirficherostexto-0.0.1
+CreateEachDirectory=1
+Packager=1
+Systems=debian
+Menus=debian:"Applications/Data Management"
+Groups=debian:"admin"
