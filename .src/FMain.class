@@ -28,8 +28,11 @@ Public Sub unirficheros()
   Dim nombres As String[]
   Dim n As String
   Dim contenido As String
-
+  Dim horacreacion As String
   Dim nombrecompleto As String
+
+  TextArea1.Text = Replace(TextArea1.text, "file://", "")
+  TextArea1.Text = Replace(TextArea1.text, "\r", "")
 
   nombres = Split(TextArea1.text, "\n")
 
@@ -41,9 +44,11 @@ Public Sub unirficheros()
 
   Next
 
-  File.Save(User.Home & "/PDF/unido" & nombrecompleto & ".csv", contenido)
-  Label3.Text = User.Home & "/PDF/unido" & nombrecompleto & ".csv"
-  Label3.Tooltip = User.Home & "/PDF/unido" & nombrecompleto & ".csv"
-  Message.Info("terminado de unir ficheros")
+  horacreacion = Format(Now, "yyyy_mm_dd_hh_nn_ss")
+
+  File.Save(User.Home & "/PDF/unido" & horacreacion & ".csv", contenido)
+  Label3.Text = User.Home & "/PDF/unido" & horacreacion & ".csv" 'para que no de problemas con el nombre muy largo
+  Label3.Tooltip = User.Home & "/PDF/unido" & horacreacion & ".csv"
+  Message.Info("terminado de unir ficheros" & "\n" & horacreacion)
 
 End
