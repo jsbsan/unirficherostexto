@@ -29,17 +29,18 @@ Public Sub unirficheros()
   Dim n As String
   Dim contenido As String
   Dim horacreacion As String
-  Dim nombrecompleto As String
+  '  Dim nombrecompleto As String
 
   TextArea1.Text = Replace(TextArea1.text, "file://", "")
   TextArea1.Text = Replace(TextArea1.text, "\r", "")
+  TextArea1.Text = Replace(TextArea1.text, "%20", " ")
 
   nombres = Split(TextArea1.text, "\n")
 
   For Each n In nombres
     If Exist(n) Then
       contenido &= File.Load(n)
-      nombrecompleto &= "_" & Replace(File.BaseName(n), "test_", "")
+      ' nombrecompleto &= "_" & Replace(File.BaseName(n), "test_", "")
     Endif
 
   Next

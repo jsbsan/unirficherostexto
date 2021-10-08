@@ -1,3 +1,6 @@
+* Fri Oct 08 2021 jsbsan <jusabejusabe@gmail.com> 0.0.4
+- %20 lo convierto en espacio
+
 * Mon Aug 09 2021 jsbsan <jusabejusabe@gmail.com> 0.0.3
 - se puede coger arrastrar y soltar los ficheros
 
