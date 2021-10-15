@@ -4,7 +4,7 @@
   MoveScaled(0,0,107,64)
   Icon = Picture["uniftxt.png"]
   { Label1 Label
-    MoveScaled(7,1,75,4)
+    MoveScaled(7,1,53,4)
     Text = ("Seleccione ficheros, copielo  y peguelo en el  TextArea:")
   }
   { TextArea1 TextArea
@@ -21,5 +21,13 @@
   { Label3 Label
     MoveScaled(2,57,106,3)
     Expand = True
+  }
+  { ButtonConfiguracion Button
+    MoveScaled(93,0,10,5)
+    ToolTip = ("Configuracion")
+    Picture = Picture["icon:/22/development"]
+  }
+  { LabelVERSION Label
+    MoveScaled(73,0,19,5)
   }
 }

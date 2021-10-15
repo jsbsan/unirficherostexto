@@ -4,6 +4,7 @@ Public Sub Form_Open()
 
   Settings.Read(Me)
   Label3.Text = User.Home & "/PDF/unidos.txt"
+  LabelVERSION.Text = "Version: " & Application.Version
 
 End
 
@@ -29,6 +30,7 @@ Public Sub unirficheros()
   Dim n As String
   Dim contenido As String
   Dim horacreacion As String
+  Dim rutaPorDefecto As String' para guardar los resultados de la union de ficheros
   '  Dim nombrecompleto As String
 
   TextArea1.Text = Replace(TextArea1.text, "file://", "")
@@ -47,9 +49,23 @@ Public Sub unirficheros()
 
   horacreacion = Format(Now, "yyyy_mm_dd_hh_nn_ss")
 
-  File.Save(User.Home & "/PDF/unido" & horacreacion & ".csv", contenido)
-  Label3.Text = User.Home & "/PDF/unido" & horacreacion & ".csv" 'para que no de problemas con el nombre muy largo
-  Label3.Tooltip = User.Home & "/PDF/unido" & horacreacion & ".csv"
+  rutaPorDefecto = Settings["ruta", user.home & "/PDF"]
+
+  File.Save(rutaPorDefecto & "/unido" & horacreacion & ".csv", contenido)
+  Label3.Text = rutaPorDefecto & "/unido " & horacreacion & ".csv" 'para que no de problemas con el nombre muy largo"
+  Label3.Tooltip = rutaPorDefecto & "/unido" & horacreacion & ".csv"
+
   Message.Info("terminado de unir ficheros" & "\n" & horacreacion)
+
+End
+
+Public Sub ButtonConfiguracion_Click()
+
+  Dialog.Path = Settings["ruta"]
+  If Dialog.SelectDirectory() Then
+  Else
+
+    Settings["ruta"] = Dialog.Path
+  Endif
 
 End
