@@ -3,14 +3,18 @@
 Public Sub Form_Open()
 
   Settings.Read(Me)
-  Label3.Text = User.Home & "/PDF/unidos.txt"
+  ButtonLimpiar_Click()
   LabelVERSION.Text = "Version: " & Application.Version
 
 End
 
 Public Sub ButtonUNIR_Click()
 
+  ButtonUNIR.Text = "espere....."
+  Wait 0.1
   unirficheros
+  Wait 0.1
+  ButtonUNIR.Text = "Unir"
 
 End
 
@@ -55,7 +59,9 @@ Public Sub unirficheros()
   Label3.Text = rutaPorDefecto & "/unido " & horacreacion & ".csv" 'para que no de problemas con el nombre muy largo"
   Label3.Tooltip = rutaPorDefecto & "/unido" & horacreacion & ".csv"
 
-  Message.Info("terminado de unir ficheros" & "\n" & horacreacion)
+  ' Message.Info("terminado de unir ficheros" & "\n" & horacreacion)
+  Music.Load("cartoon048.mp3")
+  Music.play
 
 End
 
@@ -67,5 +73,17 @@ Public Sub ButtonConfiguracion_Click()
 
     Settings["ruta"] = Dialog.Path
   Endif
+
+End
+
+Public Sub ButtonLimpiar_Click()
+
+  TextArea1.Text = ""
+  Label3.Text = ""
+  Label3.Tooltip = ""
+
+End
+
+Public Sub Label3_MouseDown()
 
 End

@@ -1,3 +1,9 @@
+* Fri Oct 15 2021 jsbsan <jusabejusabe@gmail.com> 0.0.7
+- sonido al final cuando termina y agregado boton para limpiar contenido
+
+* Fri Oct 15 2021 jsbsan <jusabejusabe@gmail.com> 0.0.6
+- Mejora siempre se pone encima de las otras ventanas
+
 * Fri Oct 15 2021 jsbsan <jusabejusabe@gmail.com> 0.0.5
 - mejora al poder guardar los ficheros en una ruta configurable
 
