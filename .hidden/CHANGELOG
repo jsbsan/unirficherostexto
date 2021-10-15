@@ -1,3 +1,6 @@
+* Fri Oct 15 2021 jsbsan <jusabejusabe@gmail.com> 0.0.5
+- mejora al poder guardar los ficheros en una ruta configurable
+
 * Fri Oct 08 2021 jsbsan <jusabejusabe@gmail.com> 0.0.4
 - %20 lo convierto en espacio
 
