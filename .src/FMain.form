@@ -1,27 +1,21 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,107,64)
+  MoveScaled(0,0,105,64)
   Icon = Picture["uniftxt.png"]
+  Resizable = False
   Stacking = Window.Above
   { Label1 Label
     MoveScaled(14,1,53,4)
     Text = ("Seleccione ficheros, copielo  y peguelo en el  TextArea:")
   }
-  { TextArea1 TextArea
-    MoveScaled(2,5,102,45)
-  }
   { ButtonUNIR Button
-    MoveScaled(80,51,22,4)
+    MoveScaled(81,6,22,4)
     Text = ("UNIR")
   }
   { Label2 Label
-    MoveScaled(1,54,60,3)
+    MoveScaled(2,7,24,3)
     Text = ("Ruta salida fichero unido:")
-  }
-  { Label3 Label
-    MoveScaled(2,57,106,3)
-    Expand = True
   }
   { ButtonConfiguracion Button
     MoveScaled(93,0,10,5)
@@ -35,5 +29,25 @@
     MoveScaled(3,1,6,4)
     ToolTip = ("limpiar contenido")
     Picture = Picture["icon:/22/clear"]
+  }
+  { ButtonAbrir Button
+    MoveScaled(81,11,22,4)
+    Text = ("Abrir carpeta de destino")
+  }
+  { ScrollView1 ScrollView
+    MoveScaled(1,16,103,47)
+    Arrangement = Arrange.Fill
+    { TextArea1 TextArea
+      MoveScaled(7,3,84,31)
+      Expand = True
+    }
+  }
+  { LabelTotalUnidos Label
+    MoveScaled(26,7,54,3)
+    Expand = True
+  }
+  { Label3 TextLabel
+    MoveScaled(2,11,77,10)
+    Expand = True
   }
 }

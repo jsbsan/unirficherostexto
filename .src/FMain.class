@@ -35,6 +35,7 @@ Public Sub unirficheros()
   Dim contenido As String
   Dim horacreacion As String
   Dim rutaPorDefecto As String' para guardar los resultados de la union de ficheros
+  Dim contador As Integer
   '  Dim nombrecompleto As String
 
   TextArea1.Text = Replace(TextArea1.text, "file://", "")
@@ -42,11 +43,12 @@ Public Sub unirficheros()
   TextArea1.Text = Replace(TextArea1.text, "%20", " ")
 
   nombres = Split(TextArea1.text, "\n")
-
+  contador = 0
   For Each n In nombres
     If Exist(n) Then
       contenido &= File.Load(n)
       ' nombrecompleto &= "_" & Replace(File.BaseName(n), "test_", "")
+      contador += 1
     Endif
 
   Next
@@ -58,10 +60,12 @@ Public Sub unirficheros()
   File.Save(rutaPorDefecto & "/unido" & horacreacion & ".csv", contenido)
   Label3.Text = rutaPorDefecto & "/unido " & horacreacion & ".csv" 'para que no de problemas con el nombre muy largo"
   Label3.Tooltip = rutaPorDefecto & "/unido" & horacreacion & ".csv"
-
+  LabelTotalUnidos.Text = " Unidos un total de " & Str(contador) & " ficheros"
   ' Message.Info("terminado de unir ficheros" & "\n" & horacreacion)
   Music.Load("cartoon048.mp3")
+  Music.Volume = 20
   Music.play
+  Desktop.Open(rutaPorDefecto)
 
 End
 
@@ -85,5 +89,14 @@ Public Sub ButtonLimpiar_Click()
 End
 
 Public Sub Label3_MouseDown()
+
+End
+
+Public Sub ButtonAbrir_Click()
+
+  Dim rutaPorDefecto As String
+
+  rutaPorDefecto = Settings["ruta", user.home & "/PDF"]
+  Desktop.Open(rutaPorDefecto)
 
 End
