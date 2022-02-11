@@ -10,8 +10,9 @@
     Text = ("Seleccione ficheros, copielo  y peguelo en el  TextArea:")
   }
   { ButtonUNIR Button
-    MoveScaled(81,6,22,4)
+    MoveScaled(77,6,26,4)
     Text = ("UNIR")
+    Picture = Picture["icon:/22/add"]
   }
   { Label2 Label
     MoveScaled(2,11,24,3)
@@ -31,8 +32,9 @@
     Picture = Picture["icon:/22/clear"]
   }
   { ButtonAbrir Button
-    MoveScaled(81,11,22,4)
+    MoveScaled(77,11,26,4)
     Text = ("Abrir carpeta de destino")
+    Picture = Picture["icon:/22/file-manager"]
   }
   { ScrollView1 ScrollView
     MoveScaled(1,20,103,43)
@@ -47,7 +49,7 @@
     Expand = True
   }
   { Label3 TextLabel
-    MoveScaled(2,15,101,4)
+    MoveScaled(2,15,78,4)
     Font = Font["-2"]
     Expand = True
   }
@@ -57,5 +59,10 @@
   { labelsufijo Label
     MoveScaled(2,6,26,4)
     Text = ("Sufijo al Nombre de Union:")
+  }
+  { ButtonbORRAR Button
+    MoveScaled(77,16,26,4)
+    Text = ("Borrar Ficheros")
+    Picture = Picture["PapeleraBorrar32.png"]
   }
 }

@@ -89,6 +89,7 @@ Public Sub ButtonLimpiar_Click()
   Label3.Text = ""
   Label3.Tooltip = ""
   TextBoxSufijo.Text = ""
+  LabelTotalUnidos.Text = ""
 
 End
 
@@ -102,5 +103,26 @@ Public Sub ButtonAbrir_Click()
 
   rutaPorDefecto = Settings["ruta", user.home & "/PDF"]
   Desktop.Open(rutaPorDefecto)
+
+End
+
+Public Sub ButtonbORRAR_Click()
+
+  Dim n As String
+  Dim nombres As String[]
+  'borra los ficheros que ha unido...
+  TextArea1.Text = Replace(TextArea1.text, "file://", "")
+  TextArea1.Text = Replace(TextArea1.text, "\r", "")
+  TextArea1.Text = Replace(TextArea1.text, "%20", " ")
+
+  nombres = Split(TextArea1.text, "\n")
+
+  For Each n In nombres
+    If Exist(n) Then
+      Kill n
+    Endif
+
+  Next
+  TextArea1.Text = ""
 
 End
