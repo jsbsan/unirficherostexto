@@ -30,6 +30,7 @@ End
 
 Public Sub unirficheros()
 
+  Dim nombrefinal As String
   Dim nombres As String[]
   Dim n As String
   Dim contenido As String
@@ -57,10 +58,12 @@ Public Sub unirficheros()
 
   rutaPorDefecto = Settings["ruta", user.home & "/PDF"]
 
-  File.Save(rutaPorDefecto & "/unido" & horacreacion & ".csv", contenido)
-  Label3.Text = rutaPorDefecto & "/unido " & horacreacion & ".csv" 'para que no de problemas con el nombre muy largo"
-  Label3.Tooltip = rutaPorDefecto & "/unido" & horacreacion & ".csv"
-  LabelTotalUnidos.Text = " Unidos un total de " & Str(contador) & " ficheros"
+  nombrefinal = rutaPorDefecto & "/unido" & horacreacion & "_" & TextBoxSufijo.text & ".csv"
+
+  File.Save(nombrefinal, contenido)
+  Label3.Text = nombrefinal 'para que no de problemas con el nombre muy largo"
+  Label3.Tooltip = nombrefinal
+  LabelTotalUnidos.Text = " " & Str(contador) & " ficheros"
   ' Message.Info("terminado de unir ficheros" & "\n" & horacreacion)
   Music.Load("cartoon048.mp3")
   Music.Volume = 20
@@ -85,6 +88,7 @@ Public Sub ButtonLimpiar_Click()
   TextArea1.Text = ""
   Label3.Text = ""
   Label3.Tooltip = ""
+  TextBoxSufijo.Text = ""
 
 End
 

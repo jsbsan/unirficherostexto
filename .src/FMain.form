@@ -14,7 +14,7 @@
     Text = ("UNIR")
   }
   { Label2 Label
-    MoveScaled(2,7,24,3)
+    MoveScaled(2,11,24,3)
     Text = ("Ruta salida fichero unido:")
   }
   { ButtonConfiguracion Button
@@ -35,7 +35,7 @@
     Text = ("Abrir carpeta de destino")
   }
   { ScrollView1 ScrollView
-    MoveScaled(1,16,103,47)
+    MoveScaled(1,20,103,43)
     Arrangement = Arrange.Fill
     { TextArea1 TextArea
       MoveScaled(7,3,84,31)
@@ -43,11 +43,19 @@
     }
   }
   { LabelTotalUnidos Label
-    MoveScaled(26,7,54,3)
+    MoveScaled(27,11,25,3)
     Expand = True
   }
   { Label3 TextLabel
-    MoveScaled(2,11,77,10)
+    MoveScaled(2,15,101,4)
+    Font = Font["-2"]
     Expand = True
+  }
+  { TextBoxSufijo TextBox
+    MoveScaled(28,6,12,4)
+  }
+  { labelsufijo Label
+    MoveScaled(2,6,26,4)
+    Text = ("Sufijo al Nombre de Union:")
   }
 }
