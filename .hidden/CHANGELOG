@@ -1,3 +1,6 @@
+* Mon Feb 14 2022 jsbsan <jusabejusabe@gmail.com> 0.0.14
+- agregado boton de carga de ficheros con filtro test_*.csv
+
 * Fri Feb 11 2022 jsbsan <jusabejusabe@gmail.com> 0.0.12
 - agregado borrar archivos
 

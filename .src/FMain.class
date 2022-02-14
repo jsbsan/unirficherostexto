@@ -126,3 +126,15 @@ Public Sub ButtonbORRAR_Click()
   TextArea1.Text = ""
 
 End
+
+Public Sub ButtonCargaFicheros_Click()
+
+  Dim f As String
+  Dim rutaPorDefecto As String = Settings["ruta", user.home & "/PDF"]
+
+  TextArea1.text = ""
+  For Each f In Dir(rutaPorDefecto, "test_*.csv", gb.file)
+    TextArea1.Text &= rutaPorDefecto & "/" & f & "\n"
+  Next
+
+End

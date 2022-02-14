@@ -54,15 +54,21 @@
     Expand = True
   }
   { TextBoxSufijo TextBox
-    MoveScaled(28,6,12,4)
+    MoveScaled(64,6,12,4)
   }
   { labelsufijo Label
-    MoveScaled(2,6,26,4)
+    MoveScaled(38,6,26,4)
+    Alignment = Align.Right
     Text = ("Sufijo al Nombre de Union:")
   }
   { ButtonbORRAR Button
     MoveScaled(77,16,26,4)
     Text = ("Borrar Ficheros")
     Picture = Picture["PapeleraBorrar32.png"]
+  }
+  { ButtonCargaFicheros Button
+    MoveScaled(2,6,28,4)
+    Text = ("Cargar ficheros test_*.csv")
+    Picture = Picture["icon:/22/file"]
   }
 }
