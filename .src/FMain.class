@@ -68,7 +68,7 @@ Public Sub unirficheros()
   Music.Load("cartoon048.mp3")
   Music.Volume = 20
   Music.play
-  Desktop.Open(rutaPorDefecto)
+  ' Desktop.Open(rutaPorDefecto)
 
 End
 

@@ -1,3 +1,6 @@
+* Sun Feb 20 2022 jsbsan <jusabejusabe@gmail.com> 0.0.15
+- cuando une no abre la carpeta destino
+
 * Mon Feb 14 2022 jsbsan <jusabejusabe@gmail.com> 0.0.14
 - agregado boton de carga de ficheros con filtro test_*.csv
 
