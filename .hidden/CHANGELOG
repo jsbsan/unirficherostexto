@@ -1,3 +1,6 @@
+* Tue Mar 29 2022 jsbsan <jusabejusabe@gmail.com> 0.0.16
+- refresca el textarea al cargar y borrar y muestra los fichero ordenador
+
 * Sun Feb 20 2022 jsbsan <jusabejusabe@gmail.com> 0.0.15
 - cuando une no abre la carpeta destino
 
