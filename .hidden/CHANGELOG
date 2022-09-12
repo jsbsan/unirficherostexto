@@ -1,3 +1,6 @@
+* Mon Sep 12 2022 jsbsan <jusabejusabe@gmail.com> 0.0.17
+- cuando introduzco el nombre global del archivo donde se van a unir todos los ficheros .csv y le doy al enter o return  se ejecuta la union
+
 * Tue Mar 29 2022 jsbsan <jusabejusabe@gmail.com> 0.0.16
 - refresca el textarea al cargar y borrar y muestra los fichero ordenador
 

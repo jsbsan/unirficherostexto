@@ -140,3 +140,11 @@ Public Sub ButtonCargaFicheros_Click()
   TextArea1.Refresh()
 
 End
+
+Public Sub TextBoxSufijo_KeyPress()
+
+  If Key.Code = Key.enter Or Key.Code = Key.return Then
+    ButtonUNIR_Click()
+  Endif
+
+End
