@@ -138,6 +138,9 @@ Public Sub ButtonCargaFicheros_Click()
     TextArea1.Text &= rutaPorDefecto & "/" & f & "\n"
   Next
   TextArea1.Refresh()
+  Label3.Text = ""
+  LabelTotalUnidos.Text = ""
+  TextBoxSufijo.Text = ""
 
 End
 

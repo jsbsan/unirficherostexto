@@ -54,10 +54,10 @@
     Expand = True
   }
   { TextBoxSufijo TextBox
-    MoveScaled(64,6,12,4)
+    MoveScaled(58,6,18,4)
   }
   { labelsufijo Label
-    MoveScaled(38,6,26,4)
+    MoveScaled(31,6,26,4)
     Alignment = Align.Right
     Text = ("Sufijo al Nombre de Union:")
   }
