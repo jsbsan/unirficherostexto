@@ -1,3 +1,6 @@
+* Fri Oct 14 2022 jsbsan <jusabejusabe@gmail.com> 0.0.19
+- boton para abrir el fichero unido usando editor xed
+
 * Wed Oct 05 2022 jsbsan <jusabejusabe@gmail.com> 0.0.18
 - al cargar datos, borra datos de los anteriores uniones
 

@@ -1,5 +1,7 @@
 ' Gambas class file
 
+Public nombrefinalFicheroUnido As String
+
 Public Sub Form_Open()
 
   Settings.Read(Me)
@@ -59,6 +61,8 @@ Public Sub unirficheros()
   rutaPorDefecto = Settings["ruta", user.home & "/PDF"]
 
   nombrefinal = rutaPorDefecto & "/unido" & horacreacion & "_" & TextBoxSufijo.text & ".csv"
+
+  nombrefinalFicheroUnido = nombrefinal
 
   File.Save(nombrefinal, contenido)
   Label3.Text = nombrefinal 'para que no de problemas con el nombre muy largo"
@@ -149,5 +153,11 @@ Public Sub TextBoxSufijo_KeyPress()
   If Key.Code = Key.enter Or Key.Code = Key.return Then
     ButtonUNIR_Click()
   Endif
+
+End
+
+Public Sub ButtonAbrirUnido_Click()
+
+  Shell "xed " & nombrefinalFicheroUnido
 
 End
