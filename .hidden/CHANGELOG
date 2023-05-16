@@ -1,3 +1,8 @@
+* Tue May 16 2023 jsbsan <jusabejusabe@gmail.com> 0.0.21
+- añado try en linea 156 que daba error cuando no hay ficheros
+
+* Thu May 11 2023 jsbsan <jusabejusabe@gmail.com> 0.0.20
+
 * Sun Apr 30 2023 jsbsan <jusabejusabe@gmail.com> 0.0.20
 - mejora reconoce el tipo de fichero si son datos o para calculos
 
