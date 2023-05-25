@@ -1,3 +1,6 @@
+* Thu May 25 2023 jsbsan <jusabejusabe@gmail.com> 0.0.22
+- renombrado de archivo para caracteres usables para w
+
 * Tue May 16 2023 jsbsan <jusabejusabe@gmail.com> 0.0.21
 - añado try en linea 156 que daba error cuando no hay ficheros
 

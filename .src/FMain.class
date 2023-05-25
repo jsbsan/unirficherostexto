@@ -60,6 +60,12 @@ Public Sub unirficheros()
 
   rutaPorDefecto = Settings["ruta", user.home & "/PDF"]
 
+  'eliminar caracteres problematicos:ñ, Ñ,🔴
+  TextBoxSufijo.text = Replace(TextBoxSufijo.text, "ñ", "n")
+  TextBoxSufijo.text = Replace(TextBoxSufijo.text, "Ñ", "N")
+  TextBoxSufijo.text = Replace(TextBoxSufijo.text, " ", "_")
+  TextBoxSufijo.text = Replace(TextBoxSufijo.text, "🔴", "_")
+
   nombrefinal = rutaPorDefecto & "/unido" & horacreacion & "_" & TextBoxSufijo.text & ".csv"
 
   nombrefinalFicheroUnido = nombrefinal
