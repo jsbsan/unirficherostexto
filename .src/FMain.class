@@ -155,7 +155,6 @@ Public Sub ButtonCargaFicheros_Click()
   TextBoxSufijo.Text = ""
 
   'abrir un fichero para ver si tienen DATOS o es para calculos.
-  Print f
   Dim contenido As String
   Dim lineas As String[]
   Dim token2 As String[]
@@ -176,7 +175,32 @@ Public Sub ButtonCargaFicheros_Click()
     TextBoxSufijo.Text = "calc_"
   Endif
 
+  TextBoxSufijo.Text = TextBoxSufijo.Text & sugerir(token2[1])
+
   TextBoxSufijo.SetFocus()
+
+End
+
+Public Function sugerir(n As String) As String
+
+  Dim contenido As String
+  Dim lineas As String[]
+  Dim a As Integer
+  Dim token As String[]
+
+  contenido = File.Load("nombres.txt")
+
+  lineas = Split(contenido, "\n")
+  For a = 0 To lineas.Count - 1
+    token = Split(lineas[a], " ")
+
+    Print n, token[0], token[1]
+
+    If InStr(Upper(n), Upper(token[0])) <> 0 Then Return Replace(token[1], "\r", "") & "_"
+
+  Next
+
+  Return ""
 
 End
 
