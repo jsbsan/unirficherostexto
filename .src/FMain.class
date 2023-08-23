@@ -8,6 +8,9 @@ Public Sub Form_Open()
   ButtonLimpiar_Click()
   LabelVERSION.Text = "Version: " & Application.Version
 
+  Wait 0.5 'carga ficheros
+  ButtonCargaFicheros_Click()
+
 End
 
 Public Sub ButtonUNIR_Click()
