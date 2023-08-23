@@ -1,3 +1,6 @@
+* Wed Aug 23 2023 jsbsan <jusabejusabe@gmail.com> 0.0.24
+- si hay error al extraer lineas en nombre.txt, continua el bucle sin dar error
+
 * Sun May 28 2023 jsbsan <jusabejusabe@gmail.com> 0.0.23
 - sugiener nombre de la presa origen
 

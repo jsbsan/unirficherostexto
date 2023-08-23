@@ -192,9 +192,10 @@ Public Function sugerir(n As String) As String
 
   lineas = Split(contenido, "\n")
   For a = 0 To lineas.Count - 1
-    token = Split(lineas[a], " ")
+    Try token = Split(lineas[a], " ")
 
-    Print n, token[0], token[1]
+    Try Print n, token[0], token[1]
+    If Error Then Continue
 
     If InStr(Upper(n), Upper(token[0])) <> 0 Then Return Replace(token[1], "\r", "") & "_"
 
