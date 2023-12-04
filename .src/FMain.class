@@ -166,6 +166,7 @@ Public Sub ButtonCargaFicheros_Click()
   Try token2 = Split(lineas[0], ";")
 
   If Error Then
+    Message.Info("Error: ficheros vacias, revisa si NO deberia de eliminar lineas con ceros finales")
     Return
   Endif
   'analizo el 3º valor del fichero

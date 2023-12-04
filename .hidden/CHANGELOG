@@ -1,3 +1,6 @@
+* Mon Dec 04 2023 jsbsan <jusabejusabe@gmail.com> 0.0.26
+- Mensaje de error cuando el fichero esta vacio de datos, puede ser que No deberia eliminar lineas con ceros finales.
+
 * Wed Aug 23 2023 jsbsan <jusabejusabe@gmail.com> 0.0.25
 - carga ficheros al abrir  la aplicacion
 
