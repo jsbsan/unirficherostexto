@@ -1,3 +1,6 @@
+* Wed Jan 10 2024 jsbsan <jusabejusabe@gmail.com> 0.0.27
+- indica error si no encuentra ficheros csv a unir
+
 * Mon Dec 04 2023 jsbsan <jusabejusabe@gmail.com> 0.0.26
 - Mensaje de error cuando el fichero esta vacio de datos, puede ser que No deberia eliminar lineas con ceros finales.
 

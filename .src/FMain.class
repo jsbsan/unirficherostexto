@@ -162,6 +162,10 @@ Public Sub ButtonCargaFicheros_Click()
   Dim lineas As String[]
   Dim token2 As String[]
   Try contenido = File.Load(rutaPorDefecto & "/" & f)
+  If contenido = "" Then
+    Message.Info("No hay ficheros")
+    Return
+  Endif
   Try lineas = Split(contenido, "\n")
   Try token2 = Split(lineas[0], ";")
 
