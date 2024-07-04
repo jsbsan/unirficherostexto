@@ -62,12 +62,18 @@ Public Sub unirficheros()
   horacreacion = Format(Now, "yyyy_mm_dd_hh_nn_ss")
 
   rutaPorDefecto = Settings["ruta", user.home & "/PDF"]
+  If Exist(rutaPorDefecto) Then
+    'existe, no hago nada
+  Else
+    'no existe la creo
+    Mkdir rutaPorDefecto
+  Endif
 
-  'eliminar caracteres problematicos:ñ, Ñ,🔴
+  'eliminar caracteres problematicos:ñ, Ñ,�
   TextBoxSufijo.text = Replace(TextBoxSufijo.text, "ñ", "n")
   TextBoxSufijo.text = Replace(TextBoxSufijo.text, "Ñ", "N")
   TextBoxSufijo.text = Replace(TextBoxSufijo.text, " ", "_")
-  TextBoxSufijo.text = Replace(TextBoxSufijo.text, "🔴", "_")
+  TextBoxSufijo.text = Replace(TextBoxSufijo.text, "�", "_")
 
   nombrefinal = rutaPorDefecto & "/unido" & horacreacion & "_" & TextBoxSufijo.text & ".csv"
 
@@ -149,6 +155,9 @@ Public Sub ButtonCargaFicheros_Click()
   Dim token As String[]
 
   TextArea1.text = ""
+
+  comprobarSiExiste(rutaPorDefecto)
+
   For Each f In Dir(rutaPorDefecto, "test_*.csv", gb.file).Sort()
     TextArea1.Text &= rutaPorDefecto & "/" & f & "\n"
   Next
@@ -224,5 +233,13 @@ End
 Public Sub ButtonAbrirUnido_Click()
 
   Shell "xed " & nombrefinalFicheroUnido
+
+End
+
+Public Sub comprobarSiExiste(r As String)
+
+  If Not Exist(r) Then
+    Mkdir r
+  Endif
 
 End
